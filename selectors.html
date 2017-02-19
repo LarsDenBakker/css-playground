@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<style>
+
+  #child ul > .list-item {
+    background-color: lightblue;
+  }
+
+  #adjacency .item + .item {
+    background-color: lightblue;
+  }
+
+  #attribute-matching a[href="http://www.google.nl"] {
+    background-color: lightgray;
+  }
+
+  #attribute-matching a[href$=".com"] {
+    background-color: palevioletred;
+  }
+
+  #attribute-matching a[href^="https://"] {
+    background-color: lightgreen;
+  }
+
+  #attribute-matching a[href*="yet"] {
+    background-color: lightyellow;
+  }
+
+  #pseudo-elements section::before {
+    content: 'Some content displayed before'
+  }
+
+  #pseudo-elements section::after {
+    content: 'Some content displayed after'
+  }
+
+  #pseudo-elements section p::first-letter {
+    font-size: 60px;
+  }
+
+  #pseudo-elements section p::first-line {
+    background-color: lightgreen;
+  }
+
+  #odd-selector li:nth-child(odd) {
+    background-color: lightgreen;
+  }
+
+  #odd-selector li:nth-child(even) {
+    background-color: lightyellow;
+  }
+
+  #complex-selector li:nth-child(3n+4) {
+    background-color: lightgreen;
+  }
+
+</style>
+
+<section id="child">
+
+  <h2>Selects only direct hildren</h2>
+
+  <ul>
+    <li>
+      <div class="list-item">List item a</div>
+    </li>
+    <li class="list-item">List item b</li>
+    <li><p class="list-item">List item c</p></li>
+    <li class="list-item">List item d</li>
+  </ul>
+
+</section>
+
+<section id="adjacency">
+
+  <h2>x + y selects all y preceded by an x</h2>
+
+  <div class="item">Paragraph 1</div>
+  <div class="item">Paragraph 2</div>
+  <div class="item">Paragraph 2</div>
+  <div class="item">Paragraph 3</div>
+  <span>bla</span>
+  <div class="item">Paragraph 4</div>
+  <div class="item">Paragraph 5</div>
+
+</section>
+
+<section id="attribute-matching">
+
+  <h2>attribute match based on literal, or parts</h2>
+
+  <a href="http://www.google.nl">Link A</a>
+  <a href="http://www.some-link.com">Link A</a>
+  <a href="http://www.some-other-link.com">Link A</a>
+  <a href="https://www.yet-another-link.com">Link A</a>
+
+</section>
+
+<section id="pseudo-elements">
+
+  <h2>Pseudo Elements</h2>
+  <section>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+      laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+      voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+      non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+  </section>
+
+
+</section>
+
+<section id="odd-selector">
+
+  <h2>Even and odd selectors</h2>
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+    <li>Item 6</li>
+    <li>Item 7</li>
+    <li>Item 8</li>
+    <li>Item 9</li>
+  </ul>
+
+</section>
+
+<section id="complex-selector">
+
+  <h2>3n + 4, starting at 4 every 3nth element is styled</h2>
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+    <li>Item 6</li>
+    <li>Item 7</li>
+    <li>Item 8</li>
+    <li>Item 9</li>
+    <li>Item 10</li>
+    <li>Item 11</li>
+    <li>Item 12</li>
+    <li>Item 13</li>
+    <li>Item 14</li>
+    <li>Item 15</li>
+    <li>Item 16</li>
+    <li>Item 17</li>
+  </ul>
+
+</section>
+
+
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+
+<style>
+
+  #box-sizing .content-box {
+    text-align: center;
+    float: left;
+    width: 200px;
+    background-color: lightblue;
+    padding-left: 8px;
+    padding-right: 8px;
+    border: 1px solid;
+  }
+
+  #box-sizing .border-box {
+    box-sizing: border-box;
+    text-align: center;
+    float: left;
+    width: 200px;
+    background-color: lightblue;
+    padding-left: 8px;
+    padding-right: 8px;
+    border: 1px solid;
+  }
+
+  #box-sizing .measure-box {
+    text-align: center;
+    margin-top: 8px;
+    width: 600px;
+    background-color: lightblue;
+    border: 1px solid;
+  }
+
+  #margin-collapse .with-margin {
+    margin: 8px;
+  }
+
+  #relative-positioning .container {
+    width: 1000px;
+  }
+
+  #relative-positioning .container > * {
+    width: 200px;
+    display: inline-block;
+    text-align: center;
+    background-color: lightgreen;
+    margin-bottom: 4px;
+    border: 1px solid;
+  }
+
+  #relative-positioning .relative {
+    position: relative;
+    top: 10px;
+    left: 30px;
+  }
+
+  #absolute-positioning .container {
+    width: 1000px;
+  }
+
+  #absolute-positioning .container > * {
+    width: 200px;
+    display: inline-block;
+    text-align: center;
+    background-color: lightgreen;
+    margin-bottom: 4px;
+    border: 1px solid;
+  }
+
+  #absolute-positioning .absolute {
+    position: absolute;
+    top: 650px;
+    left: 30px;
+  }
+
+  #absolute-positioning .relative-parent {
+    position: relative;
+  }
+
+  #absolute-positioning .absolute-child {
+    position: absolute;
+    width: 200px;
+    text-align: center;
+    background-color: lightgreen;
+    border: 1px solid;
+    top: 50px;
+    left: 10px;
+  }
+
+  #absolute-positioning .container > * {
+    width: 200px;
+    display: inline-block;
+    text-align: center;
+    background-color: lightgreen;
+    margin-bottom: 4px;
+    border: 1px solid;
+  }
+
+  #absolute-positioning {
+    margin-bottom: 48px;
+  }
+
+  #absolute-overlay .dropdown-trigger {
+    width: 200px;
+    text-align: center;
+    background-color: lightgreen;
+    border: 1px solid;
+    margin: auto;
+    cursor: pointer;
+  }
+
+  #absolute-overlay .overlay {
+    margin-top: -19px;
+    margin-left: -1px;
+    position: absolute;
+    width: 200px;
+    background-color: lightgray;
+    border: 1px solid;
+    padding: 4px;
+  }
+
+</style>
+
+<body>
+
+<section id="box-sizing">
+
+  <h2>Content box:</h2>
+
+  <div class="content-box">200px</div>
+  <div class="content-box">200px</div>
+  <div class="content-box">200px</div>
+  <br>
+  <div class="measure-box">600px</div>
+
+  <h2>Box box:</h2>
+
+  <div class="border-box">200px</div>
+  <div class="border-box">200px</div>
+  <div class="border-box">200px</div>
+  <br>
+  <div class="measure-box">600px</div>
+
+</section>
+
+<section id="margin-collapse">
+
+  <h2>Margin collapse</h2>
+
+  <div class="with-margin">Content</div>
+  <div class="with-margin"></div>
+  <div class="with-margin">Content</div>
+  <div class="with-margin">Content</div>
+  <div class="with-margin"></div>
+  <div class="with-margin"></div>
+  <div class="with-margin">Content</div>
+  <div class="with-margin">Content</div>
+
+</section>
+
+<section id="relative-positioning">
+
+  <h2>Relative positioning</h2>
+
+  <div class="container">
+    <div>Block 1</div>
+    <div class="relative">
+      Block 2
+    </div>
+    <div>Block 3</div>
+    <div>Block 4</div>
+    <div>Block 5</div>
+    <div>Block 6</div>
+    <div>Block 7</div>
+    <div>Block 8</div>
+  </div>
+</section>
+
+<section id="absolute-positioning">
+
+  <h2>Absolute positioning</h2>
+
+  <div class="container">
+    <div>Block 1</div>
+    <div class="absolute">
+      Block 2
+    </div>
+    <div class="relative-parent">
+      Block 3
+      <div class="absolute-child">
+        Block 3 child
+      </div>
+    </div>
+    <div>Block 4</div>
+    <div>Block 5</div>
+    <div>Block 6</div>
+    <div>Block 7</div>
+    <div>Block 8</div>
+  </div>
+</section>
+
+<section id="absolute-overlay">
+
+  <h2>Absolute overlay</h2>
+
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+
+  <div class="dropdown-trigger">
+    Dropdown trigger
+    <div class="overlay">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+      labore et dolore magna aliqua.
+    </div>
+  </div>
+
+
+
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+
+</section>
+
+
+</body>
+</html>
